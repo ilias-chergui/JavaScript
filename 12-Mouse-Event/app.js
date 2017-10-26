@@ -1,25 +1,20 @@
 // Exo 1 Faire disparaitre les 3 div quand souris dessus
 
-var hoverMe = document.getElementsByClassName("hoverMe");
+var hoverMe = document.querySelectorAll(".hoverMe");
   for (var i = 0; i < hoverMe.length; i++) {
-    var thisElem = hoverMe[i];
-    var thisElemName = thisElem.className;
-    thisElem.addEventListener("mouseover", function(event) {
-      event.preventDefault();
+    hoverMe[i].addEventListener("mouseover", function() {
       this.classList.add("hidden");
     });
   }
 
-// Exo 2 Quand click sur reset => faire apparaitre les 3 div disparut
+// Exo 2 faire apparaitre quand click
 
-var reset = document.getElementById("reset");
-reset.addEventListener("click", function(event) {
-  event.preventDefault();
-  for (var i = 0; i < hoverMe.length; i++) {
-    var objet = hoverMe[i];
-    objet.classList("hidden");
-  }
-});
+var reset = document.querySelector("#reset");
+  reset.addEventListener("click", function() {
+    for (var i = 0; i < hoverMe.length; i++) {
+      hoverMe[i].classList.remove("hidden");
+    }
+  });
 
 // Exo 3 Afficher la position de la souris quand elle bouge
 
@@ -31,9 +26,3 @@ document.addEventListener("mousemove", function(event) {
   horizontal.innerHTML = "x ( "+x+" )" ;
   vertical.innerHTML = "y ( "+y+" )" ;
 });
-
-// // Pour le bouton reset
-//
-// function monReset() {
-//   document.getElementById("reset").reset();
-// }
