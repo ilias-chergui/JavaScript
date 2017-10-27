@@ -1,0 +1,51 @@
+body {
+margin: 0;
+padding: 0;
+width: 100%;
+height: 100%;
+background-color: #9996FF;
+}
+
+.highlight {
+  opacity: 0;
+}
+
+#character {
+  display: block;
+  background-color: blue;
+  height: 200px;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+#up {
+   display: block;
+   background-color: red;
+   height: 100px;
+   width: 100px;
+   margin-bottom: 10px;
+}
+
+#down {
+   display: block;
+   background-color: red;
+   height: 100px;
+   width: 100px;
+   margin-bottom: 10px;
+}
+
+#right {
+   display: block;
+   background-color: red;
+   height: 100px;
+   width: 100px;
+   margin-bottom: 10px;
+}
+
+#left {
+   display: block;
+   background-color: red;
+   height: 100px;
+   width: 100px;
+   margin-bottom: 10px;
+}
